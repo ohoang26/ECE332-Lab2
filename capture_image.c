@@ -158,6 +158,8 @@ int main(void)
 	{
 		if (*KEY_ptr != 0)						// check if any KEY was pressed
 		{
+            *(VID_reg3) = 0x4;			    // Enable the video to capture one frame
+		    while (*KEY_ptr != 0);				// wait for pushbutton KEY release
 			break;
 		}
 	}
